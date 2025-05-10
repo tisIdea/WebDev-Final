@@ -1,436 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Ally | Posts</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #184d47, #2d0320);
-            color: white;
-        }
-        
-        .header, .footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background: linear-gradient(to right, rgba(24, 77, 71, 0.9), rgba(45, 3, 32, 0.9));
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo img {
-            height: 50px;
-            margin-right: 10px;
-        }
-        
-        .logo-text {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-        
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-        }
-        
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                        linear-gradient(to right, #184d47, #2d0320);
-        }
-        
-        .hero h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 18px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .posts-container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        
-        .post {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 30px;
-            margin-bottom: 30px;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .post-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .post-image {
-            width: 100px;
-            height: 100px;
-            border-radius: 10px;
-            object-fit: cover;
-            margin-right: 20px;
-        }
-        
-        .post-meta h2 {
-            margin: 0 0 10px 0;
-        }
-        
-        .post-meta p {
-            margin: 0;
-            opacity: 0.8;
-        }
-        
-        .post-content {
-            line-height: 1.6;
-        }
-        
-        .music-player {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .album-art {
-            width: 60px;
-            height: 60px;
-            border-radius: 5px;
-            margin-right: 15px;
-        }
-        
-        .track-info {
-            flex-grow: 1;
-        }
-        
-        .track-name {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .artist-name {
-            opacity: 0.8;
-            font-size: 14px;
-        }
-        
-        .playback-controls {
-            display: flex;
-            align-items: center;
-        }
-        
-        .play-button {
-            width: 40px;
-            height: 40px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-        
-        .play-button svg {
-            width: 18px;
-            height: 18px;
-            fill: #2d0320;
-        }
-        
-        .footer {
-            margin-top: 50px;
-        }
-        
-        .copyright {
-            font-size: 14px;
-            opacity: 0.7;
-        }
-        
-        .top-artists {
-            margin-top: 60px;
-        }
-        
-        .top-artists h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .artists-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        
-        .artist-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-        
-        .artist-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .artist-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .artist-info {
-            padding: 15px;
-        }
-        
-        .artist-name {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .artist-genre {
-            opacity: 0.8;
-            font-size: 14px;
-        }
-        
-        @media (max-width: 768px) {
-            .header, .footer {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px;
-            }
-            
-            .nav {
-                margin-top: 20px;
-            }
-            
-            .nav a {
-                display: inline-block;
-                margin: 5px 10px;
-            }
-            
-            .post-header {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .post-image {
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
-            
-            .artists-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music Ally | Posts</title>
+  <link rel="stylesheet" href="styles/general.css">
+  <style>
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                  linear-gradient(to right, #184d47, #2d0320);
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .post {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 30px;
+      transition: background 0.3s;
+    }
+
+    .post:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .post-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .post-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    .post-meta h2 {
+      margin: 0 0 10px 0;
+    }
+
+    .post-meta p {
+      margin: 0;
+      opacity: 0.8;
+    }
+
+    .post-content {
+      line-height: 1.6;
+    }
+
+    .tags {
+      margin-top: 10px;
+      font-size: 13px;
+      opacity: 0.6;
+    }
+
+    .music-player {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .album-art {
+      width: 60px;
+      height: 60px;
+      border-radius: 5px;
+      margin-right: 15px;
+    }
+
+    .track-info {
+      flex-grow: 1;
+    }
+
+    .track-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .artist-name {
+      opacity: 0.8;
+      font-size: 14px;
+    }
+
+    .play-button {
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .play-button svg {
+      width: 18px;
+      height: 18px;
+      fill: #2d0320;
+    }
+
+    .footer {
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+
+    .top-artists h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .artists-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .artist-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .artist-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .artist-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .artist-info {
+      padding: 15px;
+    }
+
+    .artist-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .artist-genre {
+      opacity: 0.8;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .header, .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .nav {
+        margin-top: 20px;
+      }
+
+      .nav a {
+        display: inline-block;
+        margin: 5px 10px;
+      }
+
+      .post-header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .post-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+
+      .artists-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="header">
+
+  <!-- Header -->
+    <header>
         <div class="logo">
-            <img src="/api/placeholder/100/100" alt="Music Ally Logo">
+            <iframe src="vinyl.html" class="vinyl-frame" style="border: none;"></iframe>        
             <div class="logo-text">MUSIC ALLY</div>
         </div>
-        <div class="nav">
-            <a href="#">HOME</a>
-            <a href="#" style="text-decoration: underline;">POSTS</a>
-            <a href="#">MUSIC</a>
-            <a href="#">CONTACT</a>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="posts.html" class="active">POSTS</a>
+            <a href="playlists.html">PLAYLISTS</a>
+            <a href="artist-of-the-month.html">AOTM</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>MUSIC RECOMMENDATIONS</h1>
+    <p>Discover the latest trends, hidden gems, and our personal favorites in the world of music. Join us as we explore sounds that inspire and move us.</p>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Example Post -->
+    <article class="post">
+      <div class="post-header">
+        <img src="/api/placeholder/200/200" alt="Post image" class="post-image">
+        <div class="post-meta">
+          <h2>Why Tyler, The Creator's "IGOR" Changed Everything</h2>
+          <p>Posted by Josephus | May 8, 2025</p>
+          <div class="tags">Tags: Hip-Hop, Experimental, Production</div>
         </div>
-    </div>
-    
-    <div class="hero">
-        <h1>MUSIC RECOMMENDATIONS</h1>
-        <p>Discover the latest trends, hidden gems, and our personal favorites in the world of music. Join us as we explore sounds that inspire and move us.</p>
-    </div>
-    
-    <div class="posts-container">
-        <div class="post">
-            <div class="post-header">
-                <img src="/api/placeholder/200/200" alt="Post Image" class="post-image">
-                <div class="post-meta">
-                    <h2>Why Tyler, The Creator's "IGOR" Changed Everything</h2>
-                    <p>Posted by Josephus | May 8, 2025</p>
-                </div>
-            </div>
-            <div class="post-content">
-                <p>When Tyler, The Creator released "IGOR" in 2019, few could have predicted the seismic shift it would cause in hip-hop production. Six years later, its influence can be heard everywhere from mainstream pop to underground electronic music.</p>
-                <p>The album's combination of lo-fi aesthetics with lush, soulful arrangements created a template that countless artists have attempted to replicate. What makes "IGOR" so special is how it manages to feel both deeply personal and universally accessible.</p>
-                <div class="music-player">
-                    <img src="/api/placeholder/100/100" alt="Album Art" class="album-art">
-                    <div class="track-info">
-                        <div class="track-name">EARFQUAKE</div>
-                        <div class="artist-name">Tyler, The Creator</div>
-                    </div>
-                    <div class="playback-controls">
-                        <div class="play-button">
-                            <svg viewBox="0 0 24 24">
-                                <polygon points="5,3 19,12 5,21"></polygon>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="post-content">
+        <p>When Tyler, The Creator released "IGOR" in 2019, few could have predicted the seismic shift it would cause in hip-hop production. Six years later, its influence can be heard everywhere...</p>
+        <div class="music-player">
+          <img src="/api/placeholder/100/100" alt="Album Art" class="album-art">
+          <div class="track-info">
+            <div class="track-name">EARFQUAKE</div>
+            <div class="artist-name">Tyler, The Creator</div>
+          </div>
+          <div class="play-button">
+            <svg viewBox="0 0 24 24">
+              <polygon points="5,3 19,12 5,21" />
+            </svg>
+          </div>
         </div>
-        
-        <div class="post">
-            <div class="post-header">
-                <img src="/api/placeholder/200/200" alt="Post Image" class="post-image">
-                <div class="post-meta">
-                    <h2>Steve Lacy's Rise: From iPhone Producer to Grammy Winner</h2>
-                    <p>Posted by Dea | May 5, 2025</p>
-                </div>
-            </div>
-            <div class="post-content">
-                <p>Steve Lacy's journey from producing tracks on his iPhone to becoming a Grammy-winning artist is nothing short of inspirational. His minimalist approach to production has proven that creativity trumps technical resources every time.</p>
-                <p>With his unique blend of R&B, funk, and indie rock, Lacy has carved out a sound that's immediately recognizable. His latest album expands on this foundation while exploring new sonic territories that surprise and delight.</p>
-                <div class="music-player">
-                    <img src="/api/placeholder/100/100" alt="Album Art" class="album-art">
-                    <div class="track-info">
-                        <div class="track-name">Bad Habit</div>
-                        <div class="artist-name">Steve Lacy</div>
-                    </div>
-                    <div class="playback-controls">
-                        <div class="play-button">
-                            <svg viewBox="0 0 24 24">
-                                <polygon points="5,3 19,12 5,21"></polygon>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="post">
-            <div class="post-header">
-                <img src="/api/placeholder/200/200" alt="Post Image" class="post-image">
-                <div class="post-meta">
-                    <h2>Underground Artists You Need to Hear: Spring 2025 Edition</h2>
-                    <p>Posted by Josephus | April 28, 2025</p>
-                </div>
-            </div>
-            <div class="post-content">
-                <p>Spring is in full bloom, and so is a new crop of underground artists pushing the boundaries of what music can be. From innovative production techniques to boundary-pushing lyrics, these artists represent the cutting edge of contemporary sound.</p>
-                <p>Our standout discovery this season is Mk. gee, whose ethereal productions and introspective lyrics have captivated our entire team. With just a handful of releases, he's already developing a signature sound that's as emotionally resonant as it is sonically adventurous.</p>
-                <div class="music-player">
-                    <img src="/api/placeholder/100/100" alt="Album Art" class="album-art">
-                    <div class="track-info">
-                        <div class="track-name">New Wave</div>
-                        <div class="artist-name">Mk. gee</div>
-                    </div>
-                    <div class="playback-controls">
-                        <div class="play-button">
-                            <svg viewBox="0 0 24 24">
-                                <polygon points="5,3 19,12 5,21"></polygon>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="post">
-            <div class="post-header">
-                <img src="/api/placeholder/200/200" alt="Post Image" class="post-image">
-                <div class="post-meta">
-                    <h2>Claire's Playlist: Songs That Defined My College Years</h2>
-                    <p>Posted by Dea | April 22, 2025</p>
-                </div>
-            </div>
-            <div class="post-content">
-                <p>Music has a unique ability to transport us back to specific moments in our lives. For team member Claire, these ten songs form the soundtrack to her formative college years, each one carrying memories of late-night study sessions, spontaneous road trips, and personal growth.</p>
-                <p>From the ambient electronica that accompanied essay writing to the high-energy anthems that fueled weekend celebrations, this eclectic mix reflects the many moods and phases of those transformative years.</p>
-                <div class="music-player">
-                    <img src="/api/placeholder/100/100" alt="Album Art" class="album-art">
-                    <div class="track-info">
-                        <div class="track-name">Nights</div>
-                        <div class="artist-name">Frank Ocean</div>
-                    </div>
-                    <div class="playback-controls">
-                        <div class="play-button">
-                            <svg viewBox="0 0 24 24">
-                                <polygon points="5,3 19,12 5,21"></polygon>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="posts-container">
-        <div class="top-artists">
-            <h2>OUR TOP ARTISTS</h2>
-            <div class="artists-grid">
-                <div class="artist-card">
-                    <img src="/api/placeholder/300/300" alt="Mk. gee" class="artist-image">
-                    <div class="artist-info">
-                        <div class="artist-name">Mk. gee</div>
-                        <div class="artist-genre">Alternative / Electronic</div>
-                    </div>
-                </div>
-                <div class="artist-card">
-                    <img src="/api/placeholder/300/300" alt="Tyler, The Creator" class="artist-image">
-                    <div class="artist-info">
-                        <div class="artist-name">Tyler, The Creator</div>
-                        <div class="artist-genre">Hip-Hop / R&B</div>
-                    </div>
-                </div>
-                <div class="artist-card">
-                    <img src="/api/placeholder/300/300" alt="Steve Lacy" class="artist-image">
-                    <div class="artist-info">
-                        <div class="artist-name">Steve Lacy</div>
-                        <div class="artist-genre">R&B / Alternative</div>
-                    </div>
-                </div>
-                <div class="artist-card">
-                    <img src="/api/placeholder/300/300" alt="Claire" class="artist-image">
-                    <div class="artist-info">
-                        <div class="artist-name">Claire</div>
-                        <div class="artist-genre">Dream Pop / Indie</div>
-                    </div>
-                </div>
-                <div class="artist-card">
-                    <img src="/api/placeholder/300/300" alt="Dijon" class="artist-image">
-                    <div class="artist-info">
-                        <div class="artist-name">Dijon</div>
-                        <div class="artist-genre">Alternative R&B / Soul</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="footer">
-        <div class="logo">
-            <img src="/api/placeholder/100/100" alt="Music Ally Logo">
-            <div class="logo-text">MUSIC ALLY</div>
-        </div>
-        <div class="nav">
-            <a href="#">HOME</a>
-            <a href="#">POSTS</a>
-            <a href="#">MUSIC</a>
-            <a href="#">CONTACT</a>
-        </div>
-        <div class="copyright">© 2025 Music Ally</div>
-    </div>
+      </div>
+    </article>
+
+    <!-- Add more post <article> blocks here as needed -->
+  </main>
+
 </body>
 </html>
