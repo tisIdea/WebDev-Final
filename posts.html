@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music Ally | Posts</title>
+  <link rel="stylesheet" href="styles/general.css">
+  <style>
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                  linear-gradient(to right, #184d47, #2d0320);
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .post {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 30px;
+      transition: background 0.3s;
+    }
+
+    .post:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .post-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .post-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    .post-meta h2 {
+      margin: 0 0 10px 0;
+    }
+
+    .post-meta p {
+      margin: 0;
+      opacity: 0.8;
+    }
+
+    .post-content {
+      line-height: 1.6;
+    }
+
+    .tags {
+      margin-top: 10px;
+      font-size: 13px;
+      opacity: 0.6;
+    }
+
+    .music-player {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .album-art {
+      width: 60px;
+      height: 60px;
+      border-radius: 5px;
+      margin-right: 15px;
+    }
+
+    .track-info {
+      flex-grow: 1;
+    }
+
+    .track-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .artist-name {
+      opacity: 0.8;
+      font-size: 14px;
+    }
+
+    .play-button {
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .play-button svg {
+      width: 18px;
+      height: 18px;
+      fill: #2d0320;
+    }
+
+    .footer {
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+
+    .top-artists h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .artists-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .artist-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .artist-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .artist-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .artist-info {
+      padding: 15px;
+    }
+
+    .artist-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .artist-genre {
+      opacity: 0.8;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .header, .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .nav {
+        margin-top: 20px;
+      }
+
+      .nav a {
+        display: inline-block;
+        margin: 5px 10px;
+      }
+
+      .post-header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .post-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+
+      .artists-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+    <header>
+        <div class="logo">
+            <iframe src="vinyl.html" class="vinyl-frame" style="border: none;"></iframe>        
+            <div class="logo-text">MUSIC ALLY</div>
+        </div>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="posts.html" class="active">POSTS</a>
+            <a href="playlists.html">PLAYLISTS</a>
+            <a href="artist-of-the-month.html">AOTM</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>MUSIC RECOMMENDATIONS</h1>
+    <p>Discover the latest trends, hidden gems, and our personal favorites in the world of music. Join us as we explore sounds that inspire and move us.</p>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Example Post -->
+    <article class="post">
+      <div class="post-header">
+        <img src="/api/placeholder/200/200" alt="Post image" class="post-image">
+        <div class="post-meta">
+          <h2>Why Tyler, The Creator's "IGOR" Changed Everything</h2>
+          <p>Posted by Josephus | May 8, 2025</p>
+          <div class="tags">Tags: Hip-Hop, Experimental, Production</div>
+        </div>
+      </div>
+      <div class="post-content">
+        <p>When Tyler, The Creator released "IGOR" in 2019, few could have predicted the seismic shift it would cause in hip-hop production. Six years later, its influence can be heard everywhere...</p>
+        <div class="music-player">
+          <img src="/api/placeholder/100/100" alt="Album Art" class="album-art">
+          <div class="track-info">
+            <div class="track-name">EARFQUAKE</div>
+            <div class="artist-name">Tyler, The Creator</div>
+          </div>
+          <div class="play-button">
+            <svg viewBox="0 0 24 24">
+              <polygon points="5,3 19,12 5,21" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Add more post <article> blocks here as needed -->
+  </main>
+
+</body>
+</html>
