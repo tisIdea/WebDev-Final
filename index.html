@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Ally | Home</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: Inter, sans-serif;
             background-image: url("8286703.jpg");
             color: white;
         }
         
-        .header {
+        /* Header Styles */
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
-            background: linear-gradient(to right, rgba(24, 77, 71, 0.9), rgba(45, 3, 32, 0.9));
+            height: 200px;
         }
         
         .logo {
@@ -37,16 +40,27 @@
             letter-spacing: 1px;
         }
         
-        .nav a {
+        nav a {
+            font-family: League Spartan;
+            font-size: 24px;
             color: white;
             text-decoration: none;
             margin-left: 20px;
             font-weight: bold;
         }
         
-        .hero {
+        /* Main Content Styles */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Hero Section */
+        .hero-section {
             display: flex;
             padding: 60px 50px;
+            justify-content: center;
+            gap: 100px;
         }
         
         .hero-text {
@@ -54,7 +68,9 @@
         }
         
         .hero-text h1 {
-            font-size: 36px;
+            padding-top: 70px;
+            font-family: League Spartan;
+            font-size: 45px;
             margin-bottom: 20px;
             text-transform: uppercase;
         }
@@ -65,32 +81,49 @@
             max-width: 600px;
         }
         
-        .hero-image {
+        .hero-video {
             flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
+            rotate: -6deg;
         }
         
-        .hero-image img {
-            width: 80%;
-            max-width: 400px;
+        .hero-video video {
+            width: 100%;
+            max-width: 800px;
             border-radius: 50%;
-            border: 5px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+            object-fit: cover;
+        }
+
+        .ellipse-background {
+            position: absolute;
+            width: 105%;
+            height: 100%;
+            border: 3px solid white;
+            border-radius: 50% / 55%;
+            z-index: -1;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            rotate: 10deg;
         }
         
-        .info-section {
+        /* Contact Info Section */
+        .contact-section {
             display: flex;
             justify-content: space-between;
             padding: 20px 50px;
+            margin-bottom: 50px;
         }
         
         .info-item {
+            border-top: solid 1px;
             text-transform: uppercase;
-            font-size: 14px;
+            font-size: 18px;
         }
         
         .info-item h3 {
+            font-family: Abril Fatface;
             margin-bottom: 5px;
         }
         
@@ -99,13 +132,18 @@
             margin: 0;
         }
         
-        .who-section {
+        /* Team Section */
+        .team-section {
             padding: 60px 50px;
             text-align: center;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            border-top: solid 1px white;
         }
         
-        .who-section h2 {
-            font-size: 32px;
+        .team-section h2 {
+            font-family: League Spartan;
+            font-size: 50px;
             margin-bottom: 40px;
             text-transform: uppercase;
         }
@@ -113,8 +151,7 @@
         .team-members {
             display: flex;
             justify-content: center;
-            gap: 100px;
-            margin-bottom: 60px;
+            gap: 300px;
         }
         
         .team-member {
@@ -134,9 +171,12 @@
             margin: 0;
         }
         
+        /* Artists Section */
         .artists-section {
-            padding: 0 50px 60px;
+            padding: 60px 50px;
             text-align: center;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
         
         .artists-section h2 {
@@ -184,13 +224,13 @@
             font-weight: bold;
         }
         
-        .footer {
+        /* Footer Styles */
+        footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
-            background: linear-gradient(to right, rgba(24, 77, 71, 0.9), rgba(45, 3, 32, 0.9));
-            margin-top: 30px;
+            margin-top: 50px;
         }
         
         .copyright {
@@ -198,24 +238,24 @@
             opacity: 0.7;
         }
         
+        /* Responsive Styles */
         @media (max-width: 768px) {
-            .header, .footer {
-                height: 300px;
+            header, footer {
                 flex-direction: column;
                 text-align: center;
                 padding: 20px;
             }
             
-            .nav {
+            nav {
                 margin-top: 20px;
             }
             
-            .nav a {
+            nav a {
                 display: inline-block;
                 margin: 5px 10px;
             }
             
-            .hero {
+            .hero-section {
                 flex-direction: column;
                 text-align: center;
                 padding: 40px 20px;
@@ -229,7 +269,12 @@
                 margin: 0 auto;
             }
             
-            .info-section {
+            .hero-video video {
+                width: 80%;
+                max-width: 300px;
+            }
+            
+            .contact-section {
                 flex-direction: column;
                 text-align: center;
             }
@@ -255,130 +300,137 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">
-        <iframe src="/vinyl.html" width="500px" class="vinyl-frame"></iframe>
-            <div class="logo-text">MUSIC ALLY</div>
-        </div>
-        <div class="nav">
-            <a href="#" style="text-decoration: underline;">HOME</a>
-            <a href="#">POSTS</a>
-            <a href="#">MUSIC</a>
-            <a href="#">CONTACT</a>
-        </div>
-    </div>
-    
-    <div class="hero">
-        <div class="hero-text">
-            <h1>WE ARE MUSIC ALLY.</h1>
-            <p>We are music lovers and musicians. We want you to listen to what inspires us and hear our stories.</p>
-        </div>
-        <div class="hero-image">
-            <img src="/api/placeholder/400/400" alt="Hero Image">
-        </div>
-    </div>
-    
-    <div class="info-section">
-        <div class="info-item">
-            <h3>Address</h3>
-            <p>Baguio City, Philippines</p>
-        </div>
-        <div class="info-item">
-            <h3>Phone Number</h3>
-            <p>09123456789</p>
-        </div>
-        <div class="info-item">
-            <h3>Email Address</h3>
-            <p>music.ally@gmail.com</p>
-        </div>
-    </div>
-    
-    <div class="who-section">
-        <h2>WHO WE ARE</h2>
-        <div class="team-members">
-            <div class="team-member">
-                <img src="/api/placeholder/200/200" alt="Josephus">
-                <h3>Josephus</h3>
-            </div>
-            <div class="team-member">
-                <img src="/api/placeholder/200/200" alt="Dea">
-                <h3>Dea</h3>
-            </div>
-        </div>
-    </div>
-    
-    <div class="artists-section">
-        <h2>OUR TOP ARTISTS</h2>
-        <div class="artists-columns">
-            <div class="artists-column">
-                <div class="artist-item">
-                    <div class="artist-number">1</div>
-                    <img src="/api/placeholder/50/50" alt="Mk. gee" class="artist-image">
-                    <div class="artist-name">Mk. gee</div>
-                </div>
-                <div class="artist-item">
-                    <div class="artist-number">2</div>
-                    <img src="/api/placeholder/50/50" alt="Tyler, The Creator" class="artist-image">
-                    <div class="artist-name">Tyler, The Creator</div>
-                </div>
-                <div class="artist-item">
-                    <div class="artist-number">3</div>
-                    <img src="/api/placeholder/50/50" alt="Steve Lacy" class="artist-image">
-                    <div class="artist-name">Steve Lacy</div>
-                </div>
-                <div class="artist-item">
-                    <div class="artist-number">4</div>
-                    <img src="/api/placeholder/50/50" alt="Claire" class="artist-image">
-                    <div class="artist-name">Claire</div>
-                </div>
-                <div class="artist-item">
-                    <div class="artist-number">5</div>
-                    <img src="/api/placeholder/50/50" alt="Dijon" class="artist-image">
-                    <div class="artist-name">Dijon</div>
-                </div>
-            </div>
-            <div class="artists-column">
-                <div class="artist-item">
-                    <div class="artist-number">1</div>
-                    <img src="/api/placeholder/50/50" alt="Mk. gee" class="artist-image">
-                    <div class="artist-name">Mk. gee</div>
-                </div>
-                <div class="artist-item">
-                    <div class="artist-number">2</div>
-                    <img src="/api/placeholder/50/50" alt="Tyler, The Creator" class="artist-image">
-                    <div class="artist-name">Tyler, The Creator</div>
-                </div>
-                <div class="artist-item">
-                    <div class="artist-number">3</div>
-                    <img src="/api/placeholder/50/50" alt="Steve Lacy" class="artist-image">
-                    <div class="artist-name">Steve Lacy</div>
-                </div>
-                <div class="artist-item">
-                    <div class="artist-number">4</div>
-                    <img src="/api/placeholder/50/50" alt="Steve Lacy" class="artist-image">
-                    <div class="artist-name">Steve Lacy</div>
-                </div>
-                <div class="artist-item">
-                    <div class="artist-number">5</div>
-                    <img src="/api/placeholder/50/50" alt="Steve Lacy" class="artist-image">
-                    <div class="artist-name">Steve Lacy</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="footer">
+    <!-- Header -->
+    <header>
         <div class="logo">
             <img src="/api/placeholder/100/100" alt="Music Ally Logo">
             <div class="logo-text">MUSIC ALLY</div>
         </div>
-        <div class="nav">
-            <a href="#">HOME</a>
+        <nav>
+            <a href="#" style="text-decoration: underline;">HOME</a>
             <a href="#">POSTS</a>
             <a href="#">MUSIC</a>
             <a href="#">CONTACT</a>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-text">
+                <h1>WE ARE MUSIC ALLY.</h1>
+                <p>We are music lovers and musicians. We want you to listen to what inspires us and hear our stories.</p>
+            </div>
+                <div class="hero-video">
+                    <div class="ellipse-background"> </div>
+                    <video autoplay loop muted playsinline>
+                        <source src="Find '2000s punk emo music edit' on TikTok - TikTok Search.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+        </section>
+        
+        <!-- Contact Info Section -->
+        <section class="contact-section">
+            <div class="info-item">
+                <h3>Address</h3>
+                <p>Cebu City, Philippines</p>
+            </div>
+            <div class="info-item">
+                <h3>Phone Number</h3>
+                <p>09123456789</p>
+            </div>
+            <div class="info-item">
+                <h3>Email Address</h3>
+                <p>music.ally@gmail.com</p>
+            </div>
+        </section>
+        
+        <!-- Team Section -->
+        <section class="team-section">
+            <h2>WHO WE ARE</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="/asdasdsadasdasd.jpg" alt="Josephus">
+                    <h3>Josephus</h3>
+                </div>
+                <div class="team-member">
+                    <img src="/asdasdsadasdasd.jpg" alt="Dea">
+                    <h3>Dea</h3>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Artists Section -->
+        <section class="artists-section">
+            <h2>OUR TOP ARTISTS</h2>
+            <div class="artists-columns">
+                <div class="artists-column">
+                    <div class="artist-item">
+                        <div class="artist-number">1</div>
+                        <img src="/api/placeholder/50/50" alt="Mk. gee" class="artist-image">
+                        <div class="artist-name">Mk. gee</div>
+                    </div>
+                    <div class="artist-item">
+                        <div class="artist-number">2</div>
+                        <img src="/api/placeholder/50/50" alt="Tyler, The Creator" class="artist-image">
+                        <div class="artist-name">Tyler, The Creator</div>
+                    </div>
+                    <div class="artist-item">
+                        <div class="artist-number">3</div>
+                        <img src="/api/placeholder/50/50" alt="Steve Lacy" class="artist-image">
+                        <div class="artist-name">Steve Lacy</div>
+                    </div>
+                    <div class="artist-item">
+                        <div class="artist-number">4</div>
+                        <img src="/api/placeholder/50/50" alt="Claire" class="artist-image">
+                        <div class="artist-name">Claire</div>
+                    </div>
+                    <div class="artist-item">
+                        <div class="artist-number">5</div>
+                        <img src="/api/placeholder/50/50" alt="Dijon" class="artist-image">
+                        <div class="artist-name">Dijon</div>
+                    </div>
+                </div>
+                <div class="artists-column">
+                    <div class="artist-item">
+                        <div class="artist-number">1</div>
+                        <img src="/api/placeholder/50/50" alt="Mk. gee" class="artist-image">
+                        <div class="artist-name">Mk. gee</div>
+                    </div>
+                    <div class="artist-item">
+                        <div class="artist-number">2</div>
+                        <img src="/api/placeholder/50/50" alt="Tyler, The Creator" class="artist-image">
+                        <div class="artist-name">Tyler, The Creator</div>
+                    </div>
+                    <div class="artist-item">
+                        <div class="artist-number">3</div>
+                        <img src="/api/placeholder/50/50" alt="Steve Lacy" class="artist-image">
+                        <div class="artist-name">Steve Lacy</div>
+                    </div>
+                    <div class="artist-item">
+                        <div class="artist-number">4</div>
+                        <img src="/api/placeholder/50/50" alt="Steve Lacy" class="artist-image">
+                        <div class="artist-name">Steve Lacy</div>
+                    </div>
+                    <div class="artist-item">
+                        <div class="artist-number">5</div>
+                        <img src="/api/placeholder/50/50" alt="Steve Lacy" class="artist-image">
+                        <div class="artist-name">Steve Lacy</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="logo">
+            <img src="/api/placeholder/100/100" alt="Music Ally Logo">
+            <div class="logo-text">MUSIC ALLY</div>
         </div>
         <div class="copyright">© 2025 Music Ally</div>
-    </div>
+    </footer>
 </body>
 </html>
