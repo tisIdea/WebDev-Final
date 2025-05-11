@@ -103,7 +103,7 @@
         .team-members {
             display: flex;
             justify-content: center;
-            gap: 300px;
+            gap: 330px;
         }
         
         .team-member {
@@ -121,6 +121,32 @@
         .team-member h3 {
             text-transform: uppercase;
             margin: 0;
+        }
+
+                /* Define the spinning animation */
+        @keyframes vinylSpin {
+        0% {
+            transform: rotate(0deg); /* Start rotation */
+        }
+        100% {
+            transform: rotate(360deg); /* Complete one full rotation */
+        }
+        }
+
+        /* Apply the animation to the team member images */
+        .team-member img {
+        /* Existing styles for your images (width, height, border-radius, etc.) */
+        /* Example: */
+        width: 225px; /* Adjust as needed */
+        height: 225px; /* Adjust as needed */
+        border-radius: 50%; /* Makes it round like a vinyl */
+        object-fit: cover; /* Ensures the image covers the area */
+
+        /* Apply the animation */
+        animation-name: vinylSpin; /* Name of the keyframes rule */
+        animation-duration: 13.5s; /* How long one rotation takes (adjust speed) */
+        animation-timing-function: linear; /* Constant speed */
+        animation-iteration-count: infinite; /* Keep spinning forever */
         }
         
         /* Artists Section */
@@ -140,7 +166,7 @@
         .artists-columns {
             display: flex;
             justify-content: center;
-            gap: 50px;
+            gap: 250px;
         }
         
         .artists-column {
@@ -206,7 +232,7 @@
             pointer-events: none;
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 50%;
-            padding: 6px 9px;
+            padding: 6px 9px; 
         }
 
         .artist-image-container:hover .play-button {

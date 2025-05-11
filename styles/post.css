@@ -1,0 +1,60 @@
+  .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+
+    .post-header {
+      text-align: center;
+    }
+
+    .post-header img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin: 20px 0 10px;
+    }
+
+    .meta-container {
+      display: flex;
+      align-items: center; /* Keep this for vertical centering */
+      margin-left: 12px;
+      gap: 10px;
+    }
+
+    .meta {
+      opacity: 0.8;
+      white-space: nowrap;
+      line-height: 1.5; /* Ensure consistent line height */
+      font-family: sans-serif; /* Example: Ensure same font family */
+      margin: 0; /* Reset default margins */
+      padding: 0; /* Reset default padding */
+    }
+
+    .tags {
+      margin-left: 12px;
+      font-size: 14px;
+      opacity: 0.7;
+      white-space: nowrap;
+      line-height: 1.5; /* Ensure consistent line height */
+      font-family: sans-serif; /* Example: Ensure same font family */
+      margin: 0; /* Reset default margins */
+      padding: 0; /* Reset default padding */
+    }
+
+    a.back-link {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #ffffff;
+      opacity: 0.8;
+    }
+
+    a.back-link:hover {
+      text-decoration: underline;
+    }

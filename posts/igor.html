@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IGOR - Tyler, The Creator</title>
+  <link rel="stylesheet" href="/styles/general.css"> 
+  <link rel="stylesheet" href="/styles/posts.css"> 
+  <link rel="stylesheet" href="/styles/post.css"
+</head>
+<body>
+     <!-- Header -->
+    <header>
+        <div class="logo">
+            <iframe src="vinyl.html" class="vinyl-frame" style="border: none;"></iframe>        
+            <div class="logo-text">MUSIC ALLY</div>
+        </div>
+        <nav>
+            <a href="/index.html">HOME</a>
+            <a href="/posts.html" class="active">POSTS</a>
+            <a href="/playlists.html">PLAYLISTS</a>
+            <a href="/artist-of-the-month.html">AOTM</a>
+            <a href="/contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+  <div class="container">
+    <div class="post-header">
+      <img src="/images/200127063956-tyler-the-creator-grammy.jpg" alt="Tyler the Creator IGOR">
+      <h1>Why Tyler, The Creator's "IGOR" Changed Everything</h1>
+      <div class="meta-container"> 
+        <div class="meta">Posted by Josephus | May 8, 2025</div>
+        <div class="tags">Tags: Hip-Hop, Experimental, Production</div>
+      </div>
+    </div>
+
+    <div class="content">
+      <p>When Tyler, The Creator released <em>IGOR</em> in 2019, it marked a dramatic shift not just in his career, but in the landscape of modern music. Known for his rebellious and often chaotic style, Tyler took a left turn into emotionally raw territory, blending soul, funk, synth-pop, and hip-hop into a genre-bending masterpiece.</p>
+
+      <p>IGOR wasn’t just an album; it was a sonic journey. From the raw vulnerability in “EARFQUAKE” to the layered complexity of “NEW MAGIC WAND,” the project showed us a Tyler we hadn’t met before — more refined, more emotional, more daring. With nearly every track co-produced and written by Tyler himself, the album blurred the lines between artist and auteur.</p>
+
+      <p>The cultural impact of IGOR is still felt today. Its lo-fi textures combined with bold synths and unorthodox structures inspired a wave of producers and artists to embrace imperfections and prioritize emotion over polish. It won the Grammy for Best Rap Album, though many argue it transcended the genre entirely.</p>
+
+      <p>More than anything, IGOR was about freedom — artistic, emotional, and personal. And that’s why it changed everything.</p>
+
+      <div class="music-player">
+        <div class="album-art-container">           
+          <img src="/images/Igor_-_Tyler,_the_Creator.jpg" alt="Album Art" class="album-art">
+          <div class="play-button" id="play-earfquake">▶</div>         
+        </div>
+        <div class="track-info">
+          <div class="track-name">EARFQUAKE</div>
+          <div class="artist-name">Tyler, The Creator</div>
+        </div>
+          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/5hVghJ4KaYES3BFUATCYn0?autoplay=true')"> Listen on Spotify </button>
+      </div>
+
+      <div class="music-player">
+        <div class="album-art-container">           
+          <img src="/images/Igor_-_Tyler,_the_Creator.jpg" alt="Album Art" class="album-art">
+          <div class="play-button" id="play-newmagicwand">▶</div>         
+        </div>
+        <div class="track-info">
+          <div class="track-name">NEW MAGIC WAND</div>
+          <div class="artist-name">Tyler, The Creator</div>
+        </div>
+          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/5hVghJ4KaYES3BFUATCYn0?autoplay=true')"> Listen on Spotify </button>
+      </div>
+
+      <a class="back-link" href="/posts.html">&larr; Back to Posts</a>
+    </div>
+  </div>
+</body>
+ <script src="/scripts/play-button.js"> </script>
+  <script>
+     function goToLink(url) {
+      window.open(url, '_blank'); // opens in new tab
+    }
+  </script>
+</html>
