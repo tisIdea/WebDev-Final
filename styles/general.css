@@ -40,13 +40,21 @@
             font-family: League Spartan;
             font-size: 38px;
             color: white;
+            background-image: inherit;
             text-decoration: none;
             margin-left: 20px;
             font-weight: bold;
+            transition: all ease .10s;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px;
+        }
+
+        nav a:hover{
+        -webkit-text-fill-color:white;
         }
 
         .active{
-        color: black;
+        -webkit-text-fill-color:white;
         }
 
         /* Footer Styles */
