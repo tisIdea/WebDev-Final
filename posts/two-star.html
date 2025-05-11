@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Two Star & The Dream Police - Mk.gee</title>
+  <link rel="stylesheet" href="/styles/general.css"> 
+  <link rel="stylesheet" href="/styles/posts.css"> 
+
+  <style>
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+
+    .post-header {
+      text-align: center;
+    }
+
+    .post-header img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin: 20px 0 10px;
+    }
+
+    .meta-container {
+      display: flex;
+      align-items: center;
+      margin-left: 12px;
+      gap: 10px;
+    }
+
+    .meta, .tags {
+      opacity: 0.8;
+      white-space: nowrap;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .content {
+      line-height: 1.7;
+      margin-top: 20px;
+    }
+
+    a.back-link {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #ffffff;
+      opacity: 0.8;
+    }
+
+    a.back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <iframe src="vinyl.html" class="vinyl-frame" style="border: none;"></iframe>        
+      <div class="logo-text">MUSIC ALLY</div>
+    </div>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="posts.html" class="active">POSTS</a>
+      <a href="playlists.html">PLAYLISTS</a>
+      <a href="artist-of-the-month.html">AOTM</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="post-header">
+      <img src="/images/mkgee.jpg" alt="Mk.gee Two Star">
+      <h1>Mk.gee’s “Two Star & The Dream Police” Is a Genre-Bending Revelation</h1>
+      <div class="meta-container"> 
+        <div class="meta">Posted by Josephus | May 10, 2025</div>
+        <div class="tags">Tags: Alt-Pop, Experimental, Indie</div>
+      </div>
+    </div>
+
+    <div class="content">
+      <p>On <em>“Two Star & The Dream Police,”</em> Mk.gee steps into a rare creative space — one where calculated chaos meets meticulous craftsmanship. Released in early 2024, the album is already being hailed as one of the year’s most original records, with its fusion of alternative pop, jagged guitars, and warped textures.</p>
+
+      <p>From the opening seconds, it's clear this isn’t your typical indie project. The sound is raw but never messy. There’s lo-fi grit layered beneath hi-fi ambition. Each song feels alive — as if it’s constantly rearranging itself in real time. Whether he's whispering falsettos or letting synths spin wildly out of control, Mk.gee keeps you on your toes.</p>
+
+      <p><strong>“Alesis,”</strong> one of the standout tracks, showcases Mk.gee’s fearless approach. It’s as danceable as it is disorienting — a whirlwind of pitch bends, reversed samples, and jittery rhythm. But beneath all that texture is a beating heart. There's a longing and vulnerability in his voice that anchors the sonic experimentation.</p>
+
+      <p>What makes Mk.gee special isn’t just his sound design — it’s how emotionally honest it all feels. There’s a DIY spirit baked into the project, but it never sounds unfinished. Instead, it feels like a journal entry disguised as a jam session. That authenticity cuts through, whether you’re listening through cheap earbuds or vinyl on a good pair of speakers.</p>
+
+      <p><em>Two Star & The Dream Police</em> doesn’t play by the rules, and that’s the point. It exists in its own orbit — a boundary-pushing, heart-on-sleeve experiment from one of the most exciting artists to watch in the alternative space.</p>
+
+      <div class="music-player">
+        <div class="album-art-container">           
+          <img src="/images/mk.gee-albumart.jpg" alt="Album Art" class="album-art">
+          <div class="play-button" id="play-alesis">▶</div>         
+        </div>
+        <div class="track-info">
+          <div class="track-name">Alesis</div>
+          <div class="artist-name">Mk.gee</div>
+        </div>
+        <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/3I2LFbB2DNABmRHOE3Btqs?autoplay=true')">Listen on Spotify</button>
+      </div>
+
+      <a class="back-link" href="/posts.html">&larr; Back to Posts</a>
+    </div>
+  </div>
+
+  <script src="/scripts/play-button.js"></script>
+  <script>
+    function goToLink(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>

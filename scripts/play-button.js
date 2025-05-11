@@ -11,6 +11,8 @@ const audioFiles = {
   "play-lo-que-siento": "/audio/cuco-loquesiento.mp3",
   "play-carino": "/audio/themarias-carino.wav",
   "play-simevoy": "/audio/cuco-simevoy.mp3",
+  "play-alesis": "/audio/alesis.mp3",
+  "play-letithappen": "/audio/letithappen.mp3",
 };
 
 let currentAudioElement = null;
