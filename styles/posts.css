@@ -28,6 +28,7 @@
       padding: 30px;
       margin-bottom: 30px;
       transition: ease all 0.15s;
+      cursor: pointer;
     }
 
     .post:hover {
@@ -75,6 +76,7 @@
       margin-top: 10px;
       display: flex;
       align-items: center;
+      cursor: default;
     }
 
     .album-art-container {

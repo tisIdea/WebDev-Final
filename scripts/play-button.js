@@ -13,6 +13,10 @@ const audioFiles = {
   "play-simevoy": "/audio/cuco-simevoy.mp3",
   "play-alesis": "/audio/alesis.mp3",
   "play-letithappen": "/audio/letithappen.mp3",
+  "play-rare": "/audio/rare.mp3",
+  "play-early": "/audio/early-eyes.mp3",
+  "play-noonenoticed": "/audio/themarias-noone.mp3",
+    "play-rem": "/audio/rem-imitation.mp3",
 };
 
 let currentAudioElement = null;
