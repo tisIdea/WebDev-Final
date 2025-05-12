@@ -1,0 +1,163 @@
+
+        /* Playlist Section Styles */
+        .playlist-header {
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+        
+        .playlist-header h1 {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        
+        .playlist-header h1:hover {
+            cursor: default;
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                         0 0 20px rgba(255, 255, 255, 0.5), 
+                         0 0 30px rgba(255, 255, 255, 0.3);
+            transform: scale(1.08);
+        }
+        
+        .playlist-header p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.8;
+        }
+        
+        /* Filter Controls */
+        .playlist-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'League Spartan', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .filter-button:hover, .filter-button.active {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+        
+        /* Playlist Grid */
+        .playlist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 40px;
+            padding: 0 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .playlist-card {
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .playlist-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .playlist-iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+        
+        .playlist-info {
+            padding: 15px;
+        }
+        
+        .playlist-title {
+            font-family: 'League Spartan', sans-serif;
+            margin: 0 0 8px 0;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        
+        .playlist-description {
+            opacity: 0.7;
+            font-size: 14px;
+            margin: 0 0 12px 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .playlist-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            opacity: 0.6;
+        }
+        
+        .playlist-meta span {
+            display: flex;
+            align-items: center;
+        }
+        
+        .playlist-meta i {
+            margin-right: 5px;
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(29, 185, 84, 0.9);
+            color: white;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            z-index: 1;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header, footer {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+            
+            nav {
+                margin-top: 20px;
+            }
+            
+            nav a {
+                display: inline-block;
+                margin: 5px 10px;
+            }
+            
+            .playlist-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                padding: 0 20px;
+            }
+            
+            .playlist-header {
+                padding: 40px 20px 30px;
+            }
+        }

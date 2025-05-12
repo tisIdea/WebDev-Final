@@ -142,20 +142,19 @@
         }
         }
 
-        /* Apply the animation to the team member images */
         .team-member img {
-        /* Existing styles for your images (width, height, border-radius, etc.) */
-        /* Example: */
-        width: 225px; /* Adjust as needed */
-        height: 225px; /* Adjust as needed */
-        border-radius: 50%; /* Makes it round like a vinyl */
-        object-fit: cover; /* Ensures the image covers the area */
+            width: 225px; 
+            height: 225px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            animation-name: vinylSpin; 
+            animation-duration: 13.5s; 
+            animation-timing-function: linear; 
+            animation-iteration-count: infinite; 
+        }
 
-        /* Apply the animation */
-        animation-name: vinylSpin; /* Name of the keyframes rule */
-        animation-duration: 13.5s; /* How long one rotation takes (adjust speed) */
-        animation-timing-function: linear; /* Constant speed */
-        animation-iteration-count: infinite; /* Keep spinning forever */
+        .team-member img:hover {
+            animation-play-state: paused;
         }
         
         /* Artists Section */
@@ -188,14 +187,16 @@
             display: flex;
             align-items: center;
             margin-bottom: 15px;
-            background: rgba(255, 255, 255, 0.1);
+            background-color: rgba(0, 0, 0, 0.3);
             border-radius: 5px;
             padding: 15px;
-            transition: ease all 0.10s;
+            transition: ease all 0.3s;
         }
 
         .artist-item:hover{
-            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
         
         .artist-number {
@@ -290,6 +291,7 @@
     
     .feature-card:hover {
         transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     }
     
     .feature-icon {
