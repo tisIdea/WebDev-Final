@@ -8,6 +8,16 @@
       font-family: League Spartan;
       font-size: 56px;
       margin-bottom: 20px;
+      transition: ease all 0.3s;
+    }
+
+    .hero h1:hover{
+        cursor: default;
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                         0 0 20px rgba(255, 255, 255, 0.5), 
+                         0 0 30px rgba(255, 255, 255, 0.3);
+            transform: scale(1.08);
     }
 
     .hero p {
