@@ -16,7 +16,12 @@ const audioFiles = {
   "play-rare": "/audio/rare.mp3",
   "play-early": "/audio/early-eyes.mp3",
   "play-noonenoticed": "/audio/themarias-noone.mp3",
-    "play-rem": "/audio/rem-imitation.mp3",
+  "play-rem": "/audio/rem-imitation.mp3",
+  "play-care": "/audio/care.mp3",
+  "play-coffee": "/audio/Coffee.mp3",
+  "play-if-u-want-to": "/audio/If_You_Want_To.mp3",
+  "play-she-plays-bass": "/audio/sheplaysbass.mp3",
+  "play-the-perfect-pair": "/audio/the_perfect_pair.mp3",
 };
 
 let currentAudioElement = null;

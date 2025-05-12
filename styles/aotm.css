@@ -53,11 +53,10 @@
         
         .artist-image img {
             width: 100%;
-            max-width: 400px;
             border-radius: 50%;
             object-fit: cover;
             animation-name: vinylSpin;
-            animation-duration: 30s;
+            animation-duration: 15s;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
         }
