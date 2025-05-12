@@ -57,7 +57,7 @@
             <div class="track-name">Let It Happen</div>
             <div class="artist-name">Tame Impala</div>
           </div>
-          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/3Vsbl0diFGw4SEflyqWQ9f?autoplay=true')"> Listen on Spotify </button>
+          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/2X485T9Z5Ly0xyaghN73ed?si=f87fb7ba3dc34bc0')"> Listen on Spotify </button>
         </div>
       </div>
     </article>
@@ -86,7 +86,7 @@
             <div class="track-name">Dark Red</div>
             <div class="artist-name">Steve Lacy</div>
           </div>
-          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/2kAIpGWnlhLkZ4zWTQwMUE?autoplay=true')"> Listen on Spotify </button>
+          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/3EaJDYHA0KnX88JvDhL9oa?si=813570e40c37451d')"> Listen on Spotify </button>
         </div>
       </div>
     </article>
@@ -115,7 +115,7 @@
             <div class="track-name">Lo Que Siento</div>
             <div class="artist-name">Cuco</div>
           </div>
-          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/2nGFzvICaeEWjIrBrL2RAx?autoplay=true')"> Listen on Spotify </button>
+          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/4CYeId6mLAasOb6o0NCz4Y?si=689ff5f8606c4ca2')"> Listen on Spotify </button>
         </div>
         <div class="music-player">
           <div class="album-art-container">           
@@ -126,7 +126,7 @@
             <div class="track-name">Cariño</div>
             <div class="artist-name">The Marías</div>
           </div>
-          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/5bqZfWDf2J1M2xK0Up1xgH?autoplay=true')"> Listen on Spotify </button>
+          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/16gJmoOqRt2lKmlXtDpWgH?si=331535a9ce664c2e')"> Listen on Spotify </button>
         </div>
         <div class="music-player">
           <div class="album-art-container">           
@@ -137,7 +137,7 @@
             <div class="track-name">Si Me Voy</div>
             <div class="artist-name">Cuco & The Marias </div>
           </div>
-          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/5bqZfWDf2J1M2xK0Up1xgH?autoplay=true')"> Listen on Spotify </button>
+          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/6GiCszfL4D2GlCU8tFU3sR?si=ae52fa8516ba4f63')"> Listen on Spotify </button>
         </div>
       </div>
     </article>
@@ -166,7 +166,7 @@
             <div class="track-name">Alesis</div>
             <div class="artist-name">Mk.gee</div>
           </div>
-          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/3I2LFbB2DNABmRHOE3Btqs?autoplay=true')"> Listen on Spotify </button>
+          <button class="gotospotify-button" onclick="goToLink('hhttps://open.spotify.com/track/4u7vj352S98d9iA7ac1EVG?si=b385f8a95d924457')"> Listen on Spotify </button>
         </div>
       </div>
     </article>
@@ -195,7 +195,7 @@
             <div class="track-name">Bad Habit</div>
             <div class="artist-name">Steve Lacy</div>
           </div>
-          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/4k6Uh1HXdHtTz7YlD7qv3A?autoplay=true')"> Listen on Spotify </button>
+          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/4k6Uh1HXdhtusDW5y8Gbvy?si=5671d2f1610b4818')"> Listen on Spotify </button>
         </div>
       </div>
     </article>
@@ -224,8 +224,21 @@
             <div class="track-name">EARFQUAKE</div>
             <div class="artist-name">Tyler, The Creator</div>
           </div>
-          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/5hVghJ4KaYES3BFUATCYn0?autoplay=true')"> Listen on Spotify </button>
+          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/5hVghJ4KaYES3BFUATCYn0?si=b7a65ae2ee8f4e37')"> Listen on Spotify </button>
         </div>
+
+      <div class="music-player">
+        <div class="album-art-container">           
+          <img src="/images/Igor_-_Tyler,_the_Creator.jpg" alt="Album Art" class="album-art">
+          <div class="play-button" id="play-newmagicwand">▶</div>         
+        </div>
+        <div class="track-info">
+          <div class="track-name">NEW MAGIC WAND</div>
+          <div class="artist-name">Tyler, The Creator</div>
+        </div>
+          <button class="gotospotify-button" onclick="goToLink('https://open.spotify.com/track/0fv2KH6hac06J86hBUTcSf?si=72898985cd514548')"> Listen on Spotify </button>
+      </div>
+
       </div>
     </article>
 
@@ -239,7 +252,6 @@
 
       document.querySelectorAll('.post').forEach(post => {
       post.addEventListener('click', function (e) {
-        // Prevent if clicked element is inside the music player or other clickable elements (buttons/links)
         if (e.target.closest('.music-player') || e.target.closest('button') || e.target.closest('a')) return;
 
         const link = this.getAttribute('data-href');
