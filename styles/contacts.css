@@ -14,7 +14,19 @@
 .title h1{
 font-size: 48px;
 margin: 0;
+transition: all ease 0.3s;
 }
+
+
+.title h1:hover{
+        cursor:default;
+        color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                         0 0 20px rgba(255, 255, 255, 0.5), 
+                         0 0 30px rgba(255, 255, 255, 0.3);
+        transform: scale(1.08);        
+}
+
 
 .title p{
     font-size: 25px;
@@ -62,7 +74,7 @@ margin: 0;
   }
   
   .container > div:hover {
-    height: 550px;
+    height: 500px;
   }
   
  

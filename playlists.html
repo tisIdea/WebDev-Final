@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlists - Music Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #121212, #2c2c2c);
+            color: white;
+            line-height: 1.6;
+        }
+        
+        /* Header & Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .logo {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            transition: opacity 0.3s;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* Footer */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 60px;
+        }
+        
+        .social-links a {
+            color: white;
+            margin-left: 20px;
+            font-size: 18px;
+            transition: opacity 0.3s;
+        }
+        
+        .social-links a:hover {
+            opacity: 0.7;
+        }
+
+        /* Playlist Section Styles */
+        .playlist-header {
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+        
+        .playlist-header h1 {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        
+        .playlist-header h1:hover {
+            cursor: default;
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                         0 0 20px rgba(255, 255, 255, 0.5), 
+                         0 0 30px rgba(255, 255, 255, 0.3);
+            transform: scale(1.08);
+        }
+        
+        .playlist-header p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.8;
+        }
+        
+        /* Filter Controls */
+        .playlist-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'League Spartan', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .filter-button:hover, .filter-button.active {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+        
+        /* Playlist Grid */
+        .playlist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .playlist-card {
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .playlist-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .playlist-iframe {
+            width: 100%;
+            height: 380px;
+            border: none;
+        }
+        
+        .playlist-info {
+            padding: 15px;
+        }
+        
+        .playlist-title {
+            font-family: 'League Spartan', sans-serif;
+            margin: 0 0 8px 0;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        
+        .playlist-description {
+            opacity: 0.7;
+            font-size: 14px;
+            margin: 0 0 12px 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .playlist-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            opacity: 0.6;
+        }
+        
+        .playlist-meta span {
+            display: flex;
+            align-items: center;
+        }
+        
+        .playlist-meta i {
+            margin-right: 5px;
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(29, 185, 84, 0.9);
+            color: white;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            z-index: 1;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header, footer {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+            
+            nav {
+                margin-top: 20px;
+            }
+            
+            nav a {
+                display: inline-block;
+                margin: 5px 10px;
+            }
+            
+            .playlist-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                padding: 0 20px;
+            }
+            
+            .playlist-header {
+                padding: 40px 20px 30px;
+            }
+            
+            .playlist-filters {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <iframe src="vinyl.html" class="vinyl-frame" style="border: none;"></iframe>        
+            <div class="logo-text">MUSIC ALLY</div>
+        </div>
+        <nav>
+            <a href="index.html"class="active">HOME</a>
+            <a href="posts.html">POSTS</a>
+            <a href="playlists.html">PLAYLISTS</a>
+            <a href="#" >AOTM</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Playlist Header -->
+        <div class="playlist-header">
+            <h1>Our Playlists</h1>
+            <p>Discover our carefully curated playlists featuring the best tracks from emerging and established artists. Find your new favorite sound.</p>
+        </div>
+
+        <!-- Playlist Filters -->
+        <div class="playlist-filters">
+            <button class="filter-button active">All</button>
+            <button class="filter-button">Featured</button>
+            <button class="filter-button">Hip Hop</button>
+            <button class="filter-button">Electronic</button>
+            <button class="filter-button">Indie</button>
+            <button class="filter-button">R&B</button>
+        </div>
+
+        <!-- Playlist Grid -->
+        <div class="playlist-grid">
+            <!-- Playlist Card 1 -->
+            <div class="playlist-card">
+                <div class="featured-badge">Featured</div>
+                <iframe class="playlist-iframe" src="https://open.spotify.com/embed/playlist/5pWYV6sOMCqe2eFXxEdMDp?utm_source=generator&theme=0" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <div class="playlist-info">
+                    <h3 class="playlist-title">2025</h3>
+                    <p class="playlist-description">Josephus' Personal Playlist for the Year 2025!</p>
+                    <div class="playlist-meta">
+                        <span><i class="fas fa-music"></i> 48 tracks</span>
+                        <span><i class="fas fa-calendar-alt"></i> Updated Yearly</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Playlist Card 2 -->
+            <div class="playlist-card">
+                <iframe class="playlist-iframe" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWBHeXOYZf74" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <div class="playlist-info">
+                    <h3 class="playlist-title">Indie Discoveries</h3>
+                    <p class="playlist-description">The best new indie tracks from emerging artists around the globe.</p>
+                    <div class="playlist-meta">
+                        <span><i class="fas fa-music"></i> 42 tracks</span>
+                        <span><i class="fas fa-calendar-alt"></i> Updated monthly</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Playlist Card 3 -->
+            <div class="playlist-card">
+                <iframe class="playlist-iframe" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX76Wlfdnj7AP" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <div class="playlist-info">
+                    <h3 class="playlist-title">Hip Hop Essentials</h3>
+                    <p class="playlist-description">Classic and contemporary hip hop tracks that define the genre.</p>
+                    <div class="playlist-meta">
+                        <span><i class="fas fa-music"></i> 50 tracks</span>
+                        <span><i class="fas fa-calendar-alt"></i> Updated monthly</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Playlist Card 4 -->
+            <div class="playlist-card">
+                <iframe class="playlist-iframe" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX6J5NfMJS675" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <div class="playlist-info">
+                    <h3 class="playlist-title">Electronic Focus</h3>
+                    <p class="playlist-description">Deep concentration with electronic beats. Perfect for working or studying.</p>
+                    <div class="playlist-meta">
+                        <span><i class="fas fa-music"></i> 28 tracks</span>
+                        <span><i class="fas fa-calendar-alt"></i> Updated weekly</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Playlist Card 5 -->
+            <div class="playlist-card">
+                <div class="featured-badge">Featured</div>
+                <iframe class="playlist-iframe" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4SBhb3fqCJd" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <div class="playlist-info">
+                    <h3 class="playlist-title">R&B Mood</h3>
+                    <p class="playlist-description">Smooth R&B tracks to set the mood for any occasion.</p>
+                    <div class="playlist-meta">
+                        <span><i class="fas fa-music"></i> 32 tracks</span>
+                        <span><i class="fas fa-calendar-alt"></i> Updated bi-weekly</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Playlist Card 6 -->
+            <div class="playlist-card">
+                <iframe class="playlist-iframe" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5KpP2LN299J" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <div class="playlist-info">
+                    <h3 class="playlist-title">Chill Lounge</h3>
+                    <p class="playlist-description">Relaxing beats for unwinding after a long day.</p>
+                    <div class="playlist-meta">
+                        <span><i class="fas fa-music"></i> 25 tracks</span>
+                        <span><i class="fas fa-calendar-alt"></i> Updated monthly</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+      <footer>
+        <div class="logo">
+            <iframe src="vinyl.html" class="vinyl-frame" style="border: none;"></iframe>        
+            <div class="logo-text">MUSIC ALLY</div>
+        </div>
+        <div class="copyright">© 2025 Music Ally</div>
+    </footer>
+    <script>
+        // Simple filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-button');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // In a real application, you would filter the playlists here
+                    // For this demo, we're just updating the button state
+                });
+            });
+        });
+    </script>
+</body>
+</html>
