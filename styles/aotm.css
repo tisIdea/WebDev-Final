@@ -1,400 +1,425 @@
-    /* Main Content Styles */
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        /* Artist of the Month Hero Section */
-        .artist-hero-section {
-            display: flex;
-            padding: 60px 50px;
-            justify-content: center;
-            gap: 100px;
-            margin-bottom: 40px;
-            margin-top: 40px;
-        }
-        
-        .artist-info {
-            flex: 1;
-        }
-        
-        .artist-info h1 {
-            padding-top: 20px;
-            font-family: League Spartan;
-            font-size: 48px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            transition: ease all 0.3s;
-        }
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; /* Add padding for mobile */
+}
 
-        .artist-info h1:hover{
-            cursor:default;
-            color: white;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-                         0 0 20px rgba(255, 255, 255, 0.5), 
-                         0 0 30px rgba(255, 255, 255, 0.3);
-            transform: scale(1.08);        
-        }
-        
-        .artist-info p {
-            font-size: 18px;
-            line-height: 1.6;
-            max-width: 600px;
-            margin-bottom: 20px;
-        }
-        
-        .artist-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-        
-        .artist-image img {
-            width: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            animation-name: vinylSpin;
-            animation-duration: 15s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-        }
-        
-        .artist-image img:hover {
-            animation-play-state: paused;
-        }
-        
-        @keyframes vinylSpin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-        
-        .ellipse-background {
-            position: absolute;
-            width: 105%;
-            height: 100%;
-            border: 3px solid white;
-            border-radius: 50%;
-            z-index: -1;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            rotate: 10deg;
-        }
-        
-        /* Music Tracks Section */
-        .music-section {
-            padding: 40px 50px;
-            margin-bottom: 40px;
-            background: rgba(0, 0, 0, 0.35);
-            border-radius: 10px;
-        }
-        
-        .music-section h2 {
-            font-family: League Spartan;
-            font-size: 36px;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            text-align: center;
-        }
-        
-        .tracks-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .track-item {
-            display: flex;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.3);
-            border-radius: 5px;
-            padding: 15px;
-            transition: ease all 0.3s;
-        }
-        
-        .track-item:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .track-number {
-            margin-left: 10px;
-            font-size: 24px;
-            font-weight: bold;
-            margin-right: 15px;
-            opacity: 0.8;
-            width: 30px;
-        }
-        
-        .track-image-container {
-            position: relative;
-            width: 70px;
-            height: 70px;
-            margin-right: 20px;
-        }
-        
-        .track-image {
-            width: 100%;
-            height: 100%;
-            border-radius: 5px;
-            object-fit: cover;
-            transition: transform 0.3s ease, filter 0.3s ease;
-        }
-        
-        .track-image-container:hover .track-image {
-            transform: scale(1.05);
-            filter: brightness(0.7);
-        }
-        
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 20px;
-            color: white;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 50%;
-            padding: 6px 9px;
-            cursor: pointer;
-        }
-        
-        .track-image-container:hover .play-button {
-            opacity: 1;
-        }
-        
-        .track-info {
-            flex: 1;
-        }
-        
-        .track-name {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .track-details {
-            font-size: 14px;
-            opacity: 0.8;
-        }
-        
-        .track-duration {
-            font-size: 14px;
-            opacity: 0.8;
-            margin-right: 15px;
-        }
-        
-        /* Review Section */
-        .review-section {
-            padding: 40px 50px;
-            margin-bottom: 40px;
-        }
-        
-        .review-section h2 {
-            font-family: League Spartan;
-            font-size: 36px;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            text-align: center;
-        }
-        
-        .review-container {
-            background: rgba(0, 0, 0, 0.35);
-            border-radius: 10px;
-            padding: 30px;
-        }
-        
-        .reviewer-info {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .reviewer-image {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 15px;
-        }
-        
-        .reviewer-name {
-            font-weight: bold;
-            font-size: 18px;
-        }
-        
-        .reviewer-title {
-            font-size: 14px;
-            opacity: 0.8;
-        }
-        
-        .review-date {
-            margin-left: auto;
-            font-size: 14px;
-            opacity: 0.8;
-        }
-        
-        .rating {
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #FFD700;
-        }
-        
-        .review-text {
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-        
-        .review-text p {
-            margin-bottom: 15px;
-        }
-        
-        /* Previous Artists Section */
-        .previous-artists {
-            padding: 40px 50px;
-            margin-bottom: 40px;
-            border-top: solid 1px white;
-        }
-        
-        .previous-artists h2 {
-            font-family: League Spartan;
-            font-size: 36px;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            text-align: center;
-        }
-        
-        .previous-artists-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .previous-artist-card {
-            background: rgba(0, 0, 0, 0.35);
-            border-radius: 10px;
-            padding: 20px;
-            width: 200px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .previous-artist-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .previous-artist-card img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
-        
-        .previous-artist-card h3 {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-        
-        .previous-artist-card p {
-            font-size: 14px;
-            opacity: 0.8;
-        }
-        
-        /* Footer Styles */
-        footer {
-            background-color: rgba(0, 0, 0, 0.35);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            margin-top: 50px;
-        }
-        
-        .copyright {
-            font-size: 14px;
-            opacity: 0.7;
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px;
-            }
-            
-            nav {
-                margin-top: 20px;
-            }
-            
-            nav a {
-                display: inline-block;
-                margin: 5px 10px;
-                font-size: 28px;
-            }
-            
-            .artist-hero-section {
-                flex-direction: column;
-                text-align: center;
-                padding: 40px 20px;
-                gap: 40px;
-            }
-            
-            .artist-info {
-                order: 2;
-            }
-            
-            .artist-image {
-                order: 1;
-            }
-            
-            .artist-image img {
-                max-width: 250px;
-            }
-            
-            .music-section,
-            .review-section,
-            .previous-artists {
-                padding: 30px 20px;
-            }
-            
-            .track-item {
-                flex-wrap: wrap;
-            }
-            
-            .track-number {
-                width: 20px;
-                margin-right: 10px;
-            }
-            
-            .track-image-container {
-                width: 50px;
-                height: 50px;
-                margin-right: 10px;
-            }
-            
-            .track-info {
-                width: 100%;
-                margin-top: 10px;
-            }
-            
-            .previous-artists-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .previous-artist-card {
-                width: 100%;
-                max-width: 200px;
-            }
-        }
+/* Artist of the Month Hero Section */
+.artist-hero-section {
+    display: flex;
+    padding: 60px 20px; /* Reduced side padding */
+    justify-content: center;
+    gap: clamp(30px, 5vw, 100px); /* Responsive gap */
+    margin-bottom: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.artist-info {
+    flex: 1;
+    min-width: 280px; /* Ensure minimum width on small screens */
+}
+
+.artist-info h1 {
+    padding-top: 20px;
+    font-family: 'League Spartan', sans-serif; /* Added fallback font */
+    font-size: clamp(32px, 6vw, 48px); /* Responsive font size */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    transition: ease all 0.3s;
+}
+
+.artist-info h1:hover {
+    cursor: default;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                 0 0 20px rgba(255, 255, 255, 0.5), 
+                 0 0 30px rgba(255, 255, 255, 0.3);
+    transform: scale(1.08);        
+}
+
+.artist-info p {
+    font-size: clamp(16px, 2vw, 18px); /* Responsive font size */
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.artist-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-width: 280px; 
+    max-width: 500px; 
+    margin: 0 auto; 
+}
+
+.artist-image img {
+    width: 100%;
+    max-width: 100%; /* Ensure image doesn't overflow */
+    border-radius: 50%;
+    object-fit: cover;
+    animation-name: vinylSpin;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    aspect-ratio: 1/1; /* Maintain circle shape */
+}
+
+.artist-image img:hover {
+    animation-play-state: paused;
+}
+
+@keyframes vinylSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ellipse-background {
+    position: absolute;
+    width: 105%;
+    height: 100%;
+    border: 3px solid white;
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    rotate: 10deg;
+}
+
+/* Music Tracks Section */
+.music-section {
+    padding: 30px 20px; /* Reduced padding for mobile */
+    margin-bottom: 30px;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+}
+
+.music-section h2 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: clamp(26px, 5vw, 36px); /* Responsive font size */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.tracks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.track-item {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto; /* Better layout control */
+    grid-template-areas: 
+        "number image info duration"
+        ". . details ."; /* For mobile stacking */
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 15px;
+    transition: ease all 0.3s;
+    column-gap: 15px;
+}
+
+.track-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.track-number {
+    grid-area: number;
+    margin-left: 10px;
+    font-size: clamp(18px, 3vw, 24px); /* Responsive font size */
+    font-weight: bold;
+    opacity: 0.8;
+    min-width: 25px;
+}
+
+.track-image-container {
+    grid-area: image;
+    position: relative;
+    width: clamp(50px, 10vw, 70px); /* Responsive size */
+    height: clamp(50px, 10vw, 70px); /* Responsive size */
+}
+
+.track-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.track-image-container:hover .track-image {
+    transform: scale(1.05);
+    filter: brightness(0.7);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(16px, 3vw, 20px); /* Responsive size */
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 6px 9px;
+    cursor: pointer;
+}
+
+.track-image-container:hover .play-button {
+    opacity: 1;
+}
+
+.track-info {
+    grid-area: info;
+}
+
+.track-name {
+    font-size: clamp(16px, 2.5vw, 18px); /* Responsive font size */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.track-details {
+    grid-area: details;
+    font-size: clamp(12px, 2vw, 14px); /* Responsive font size */
+    opacity: 0.8;
+}
+
+.track-duration {
+    grid-area: duration;
+    font-size: clamp(12px, 2vw, 14px); /* Responsive font size */
+    opacity: 0.8;
+    margin-right: 15px;
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Review Section */
+.review-section {
+    padding: 30px 20px; /* Reduced padding for mobile */
+    margin-bottom: 30px;
+}
+
+.review-section h2 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: clamp(26px, 5vw, 36px); /* Responsive font size */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.review-container {
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    padding: clamp(15px, 3vw, 30px); /* Responsive padding */
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 10px;
+}
+
+.reviewer-image {
+    width: clamp(40px, 8vw, 60px); /* Responsive size */
+    height: clamp(40px, 8vw, 60px); /* Responsive size */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    font-size: clamp(16px, 2.5vw, 18px); /* Responsive font size */
+}
+
+.reviewer-title {
+    font-size: clamp(12px, 2vw, 14px); /* Responsive font size */
+    opacity: 0.8;
+}
+
+.review-date {
+    margin-left: auto;
+    font-size: clamp(12px, 2vw, 14px); /* Responsive font size */
+    opacity: 0.8;
+}
+
+.rating {
+    margin-bottom: 20px;
+    font-size: clamp(20px, 3vw, 24px); /* Responsive font size */
+    color: #FFD700;
+}
+
+.review-text {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: clamp(14px, 2vw, 16px); /* Responsive font size */
+}
+
+.review-text p {
+    margin-bottom: 15px;
+}
+
+/* Previous Artists Section */
+.previous-artists {
+    padding: 30px 20px; /* Reduced padding for mobile */
+    margin-bottom: 30px;
+    border-top: solid 1px white;
+}
+
+.previous-artists h2 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: clamp(26px, 5vw, 36px); /* Responsive font size */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.previous-artists-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    justify-content: center;
+}
+
+.previous-artist-card {
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%; /* Full width of grid cell */
+    max-width: 200px; /* Maximum width constraint */
+    margin: 0 auto; /* Center in grid cell */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.previous-artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.previous-artist-card img {
+    width: clamp(80px, 15vw, 120px); /* Responsive size */
+    height: clamp(80px, 15vw, 120px); /* Responsive size */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.previous-artist-card h3 {
+    font-size: clamp(15px, 2.5vw, 18px); /* Responsive font size */
+    margin-bottom: 5px;
+}
+
+.previous-artist-card p {
+    font-size: clamp(12px, 2vw, 14px); /* Responsive font size */
+    opacity: 0.8;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; /* Reduced padding for mobile */
+    margin-top: 40px;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 10px;
+}
+
+.copyright {
+    font-size: clamp(12px, 2vw, 14px); /* Responsive font size */
+    opacity: 0.7;
+}
+
+/* Enhanced Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    nav {
+        margin-top: 20px;
+    }
+    
+    nav a {
+        display: inline-block;
+        margin: 5px 10px;
+        font-size: 22px; /* Reduced from 28px for better mobile fit */
+    }
+    
+    .artist-hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px; /* Further reduced padding */
+        gap: 30px; /* Reduced gap */
+    }
+    
+    .artist-info {
+        order: 2;
+    }
+    
+    .artist-image {
+        order: 1;
+        max-width: 250px; /* Constrain size on mobile */
+    }
+    
+    .track-item {
+        grid-template-columns: auto 1fr auto; /* Simplified grid on mobile */
+        padding: 12px;
+    }
+    
+    .track-duration {
+        justify-self: start; /* Align to left on mobile */
+        margin-left: 5px; /* Small left margin */
+    }
+    
+    .reviewer-info {
+        justify-content: center; /* Center on mobile */
+    }
+    
+    .review-date {
+        margin-left: 0; /* Reset auto margin */
+        width: 100%; /* Full width */
+        text-align: center; /* Center the date on mobile */
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .artist-hero-section {
+        padding: 20px 10px; /* Further reduced padding */
+    }
+    
+    .previous-artists-container {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller cards */
+        gap: 15px;
+    }
+    
+    .previous-artist-card {
+        padding: 10px;
+    }
+    
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}

@@ -1,120 +1,177 @@
-        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Six+Caps&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Six+Caps&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Six+Caps&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Work Sans', sans-serif;
-            background-image: url("/images/8286703.jpg");
-            color: white;
-            line-height: 1.6;
-            min-height: 100vh;
-            background-attachment: fixed;
-        }
-        
-        /* Header Styles */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            height: 200px;
-            background-color: rgba(0, 0, 0, 0.15);
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo img {
-            height: 50px;
-            margin-right: 10px;
-        }
-        
-        .logo-text {
-            font-family: Six Caps;
-            font-size: 68px;
-            font-weight: bold;
-        }
-        
-        nav a {
-            font-family: League Spartan;
-            font-size: 38px;
-            color: white;
-            background-image: inherit;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-            transition: all ease .10s;
-            -webkit-text-fill-color: transparent;
-            -webkit-text-stroke: 1px;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        nav a:hover{
-            color: white;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-                         0 0 20px rgba(255, 255, 255, 0.5), 
-                         0 0 30px rgba(255, 255, 255, 0.3);
-            transform: scale(1.08);        
-        }
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-image: url("/images/8286703.jpg");
+    color: white;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-attachment:fixed;
+    background-size: cover;
+    background-position: center;
+}
 
-        .active{
-            -webkit-text-fill-color: white;
-            color: white;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-                         0 0 20px rgba(255, 255, 255, 0.5), 
-                         0 0 30px rgba(255, 255, 255, 0.3);
-            transform: scale(1.08);
-        }
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
 
-        /* Footer Styles */
-        footer {
-            background-color: rgba(0, 0, 0, 0.35);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            margin-top: 50px;
-        }
+.logo {
+    display: flex;
+    align-items: center;
+}
 
-/* For smaller screens nav bar*/
-        @media (max-width: 480px),(max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        iframe{
-            margin-top: 10px;
-        }
-            .logo {
-                align-content: center;
-            }
-        
-            nav {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                margin-left: 5px;
-            }
-        
-            nav a {
-                font-size: 20px;
-                margin: 5px 0;
-            }
-        
-            .logo-text {
-                font-size: 35px;
-            }
-        
-            .vinyl-frame {
-                width: 100px;
-                height: 100px;
-            }
-        }
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-family: 'Six Caps', sans-serif;
+    font-size: 68px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 38px;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: all ease .10s;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+}
+
+nav a:hover {
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                 0 0 20px rgba(255, 255, 255, 0.5), 
+                 0 0 30px rgba(255, 255, 255, 0.3);
+    transform: scale(1.08);        
+}
+
+.active {
+    -webkit-text-fill-color: white;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                 0 0 20px rgba(255, 255, 255, 0.5), 
+                 0 0 30px rgba(255, 255, 255, 0.3);
+    transform: scale(1.08);
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    margin-top: 50px;
+}
+
+/* Tablet Screens */
+@media (max-width: 992px) {
+    header {
+        height: auto;
+        padding: 20px 30px;
+    }
+    
+    .logo-text {
+        font-size: 56px;
+    }
+    
+    nav a {
+        font-size: 30px;
+        margin-left: 15px;
+    }
+    
+    footer {
+        padding: 15px 30px;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        height: auto;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    .logo-text {
+        font-size: 46px;
+    }
+    
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    nav a {
+        font-size: 24px;
+        margin: 5px 10px;
+    }
+    
+    .vinyl-frame {
+        width: 100px;
+        height: 100px;
+    }
+    
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    footer > * {
+        margin-bottom: 10px;
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    .logo-text {
+        font-size: 38px;
+    }
+    
+    nav a {
+        font-size: 20px;
+        margin: 5px;
+    }
+    
+    iframe {
+        width: 100%;
+    }
+}

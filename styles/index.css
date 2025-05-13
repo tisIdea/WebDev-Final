@@ -1,428 +1,552 @@
-
 /* Main Content Styles */
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        /* Hero Section */
-        .hero-section {
-            display: flex;
-            padding: 60px 50px;
-            justify-content: center;
-            gap: 100px;
-            margin-bottom: 40px;
-            margin-top: 40px;
-        }
-        
-        .hero-text {
-            flex: 1;
-        }
-        
-        .hero-text h1 {
-            padding-top: 70px;
-            font-family: League Spartan;
-            font-size: 48px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            transition: ease all 0.3s;
-        }
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; /* Add padding for small screens */
+}
 
-        .hero-text h1:hover{
-        cursor:default;
-        color: white;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-                         0 0 20px rgba(255, 255, 255, 0.5), 
-                         0 0 30px rgba(255, 255, 255, 0.3);
-        transform: scale(1.08);        
-        }
-        
-        .hero-text p {
-            font-size: 18px;
-            line-height: 1.6;
-            max-width: 600px;
-        }
-        
-        .hero-video {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            rotate: -6deg;
-        }
-        
-        .hero-video video {
-            width: 100%;
-            min-width: 540px;
-            max-width: 800px;
-            border-radius: 50%;
-            overflow: hidden;
-            object-fit: cover;
-        }
+/* Hero Section */
+.hero-section {
+    display: flex;
+    padding: 60px 50px;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
 
-        .ellipse-background {
-            position: absolute;
-            width: 105%;
-            height: 100%;
-            border: 3px solid white;
-            border-radius: 50% / 55%;
-            z-index: -1;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            rotate: 10deg;
-        }
-        
-        /* Contact Info Section */
-        .contact-section {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 50px;
-            margin-bottom: 50px;
-        }
-        
-        .info-item {
-            border-top: solid 1px;
-            text-transform: uppercase;
-            font-size: 18px;
-        }
-        
-        .info-item h3 {
-            font-family: League Spartan;
-            margin-bottom: 5px;
-        }
-        
-        .info-item p {
-            opacity: 0.8;
-            margin: 0;
-        }
-        
-        /* Team Section */
-        .team-section {
-            padding: 60px 50px;
-            text-align: center;
-            border-top: solid 1px white;
-        }
-        
-        .team-section h2 {
-            font-family: League Spartan;
-            font-size: 50px;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-        }
-        
-        .team-members {
-            display: flex;
-            justify-content: center;
-            gap: 330px;
-        }
-        
-        .team-member {
-            text-align: center;
-        }
-        
-        .team-member img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-            object-fit: cover;
-        }
-        
-        .team-member h3 {
-            text-transform: uppercase;
-            margin: 0;
-        }
+.hero-text {
+    flex: 1;
+}
 
-                /* Define the spinning animation */
-        @keyframes vinylSpin {
-        0% {
-            transform: rotate(0deg); /* Start rotation */
-        }
-        100% {
-            transform: rotate(360deg); /* Complete one full rotation */
-        }
-        }
+.hero-text h1 {
+    padding-top: 70px;
+    font-family: League Spartan;
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    transition: ease all 0.3s;
+}
 
-        .team-member img {
-            width: 225px; 
-            height: 225px; 
-            border-radius: 50%; 
-            object-fit: cover; 
-            animation-name: vinylSpin; 
-            animation-duration: 13.5s; 
-            animation-timing-function: linear; 
-            animation-iteration-count: infinite; 
-        }
+.hero-text h1:hover{
+    cursor:default;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                 0 0 20px rgba(255, 255, 255, 0.5), 
+                 0 0 30px rgba(255, 255, 255, 0.3);
+    transform: scale(1.08);        
+}
 
-        .team-member img:hover {
-            animation-play-state: paused;
-        }
-        
-        /* Artists Section */
-        .artists-section {
-            padding: 60px 50px;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.35);
-            border-radius: 10px;
-        }
-        
-        .artists-section h2 {
-            font-family: League Spartan;
-            font-size: 28px;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-        }
-        
-        .artists-columns {
-            display: flex;
-            justify-content: center;
-            gap: 250px;
-        }
-        
-        .artists-column {
-            flex: 1;
-            max-width: 300px;
-        }
-        
-        .artist-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            background-color: rgba(0, 0, 0, 0.3);
-            border-radius: 5px;
-            padding: 15px;
-            transition: ease all 0.3s;
-        }
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+}
 
-        .artist-item:hover{
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .artist-number {
-            margin-left: 10px;
-            font-size: 24px;
-            font-weight: bold;
-            margin-right: 15px;
-            opacity: 0.8;
-        }
-        
-        .artist-image {
-            width: 50px;
-            height: 50px;
-            border-radius: 5px;
-            margin-right: 15px;
-            object-fit: cover;
-        }
-        
-        .artist-name {
-            font-weight: bold;
-        }
+.hero-video {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    rotate: -6deg;
+}
 
-        .artist-image-container {
-            margin-left: 12px;
-            margin-right: 12px;
-            position: relative;
-            width: 50px;
-            height: 50px;
-        }
+.hero-video video {
+    width: 100%;
+    min-width: 540px;
+    max-width: 800px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
 
-        .artist-image-container .artist-image {
-            transition: transform 0.3s ease, filter 0.3s ease;
-        }
+.ellipse-background {
+    position: absolute;
+    width: 105%;
+    height: 100%;
+    border: 3px solid white;
+    border-radius: 50% / 55%;
+    z-index: -1;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    rotate: 10deg;
+}
 
-        .artist-image-container:hover .artist-image {
-            transform: scale(1.05);
-            filter: brightness(0.7);
-        }
+/* Contact Info Section */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    margin-bottom: 50px;
+}
 
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 20px;
-            color: white;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 50%;
-            padding: 6px 9px; 
-        }
+.info-item {
+    border-top: solid 1px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
 
-        .artist-image-container:hover .play-button {
-            opacity: 1;
-            pointer-events: auto;
-            cursor: pointer;
-        }
+.info-item h3 {
+    font-family: League Spartan;
+    margin-bottom: 5px;
+}
 
+.info-item p {
+    opacity: 0.8;
+    margin: 0;
+}
 
-  /* Features Section Styles */
-    .features-section {
-        padding: 40px 50px;
+/* Team Section */
+.team-section {
+    padding: 60px 50px;
+    text-align: center;
+    border-top: solid 1px white;
+}
+
+.team-section h2 {
+    font-family: League Spartan;
+    font-size: 50px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 330px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Define the spinning animation */
+@keyframes vinylSpin {
+    0% {
+        transform: rotate(0deg); /* Start rotation */
+    }
+    100% {
+        transform: rotate(360deg); /* Complete one full rotation */
+    }
+}
+
+.team-member img {
+    width: 225px; 
+    height: 225px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    animation-name: vinylSpin; 
+    animation-duration: 13.5s; 
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite; 
+}
+
+.team-member img:hover {
+    animation-play-state: paused;
+}
+
+/* Artists Section */
+.artists-section {
+    padding: 60px 50px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+}
+
+.artists-section h2 {
+    font-family: League Spartan;
+    font-size: 28px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.artists-columns {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+}
+
+.artists-column {
+    flex: 1;
+    max-width: 300px;
+}
+
+.artist-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 15px;
+    transition: ease all 0.3s;
+}
+
+.artist-item:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.artist-number {
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 15px;
+    opacity: 0.8;
+}
+
+.artist-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.artist-name {
+    font-weight: bold;
+}
+
+.artist-image-container {
+    margin-left: 12px;
+    margin-right: 12px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.artist-image-container .artist-image {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.artist-image-container:hover .artist-image {
+    transform: scale(1.05);
+    filter: brightness(0.7);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 6px 9px; 
+}
+
+.artist-image-container:hover .play-button {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* Features Section Styles */
+.features-section {
+    padding: 40px 50px;
+    text-align: center;
+    margin-bottom: 40px;
+    border-top: solid 1px white;
+}
+
+.features-section h2 {
+    font-family: League Spartan;
+    font-size: 46px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.features-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    padding: 25px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.feature-card h3 {
+    font-family: League Spartan;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.playlist-list, .posts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+.playlist-list li, .posts-list li {
+    margin-bottom: 8px;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.artist-spotlight {
+    margin-bottom: 20px;
+}
+
+.artist-spotlight h4 {
+    margin: 25px 0;
+    font-size: 18px;
+}
+
+.feature-button {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: League Spartan;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.feature-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.copyright {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .team-members {
+        gap: 150px; /* Reduce gap for medium screens */
+    }
+    
+    .artists-columns {
+        gap: 100px; /* Reduce gap for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        gap: 50px; /* Reduce gap for tablet screens */
+        padding: 40px 30px;
+    }
+    
+    .team-members {
+        gap: 80px; /* Further reduce gap */
+    }
+    
+    .artists-columns {
+        gap: 50px;
+    }
+    
+    .hero-text h1 {
+        font-size: 40px;
+        padding-top: 40px;
+    }
+    
+    .hero-video video {
+        min-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    header, footer {
+        flex-direction: column;
         text-align: center;
-        margin-bottom: 40px;
-        border-top: solid 1px white;
+        padding: 20px;
+    }
+    
+    nav {
+        margin-top: 20px;
+    }
+    
+    nav a {
+        display: inline-block;
+        margin: 5px 10px;
+    }
+    
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+    
+    .hero-text {
+        margin-bottom: 0;
+    }
+    
+    .hero-text h1 {
+        font-size: 32px;
+        padding-top: 20px;
+    }
+    
+    .hero-text p {
+        margin: 0 auto;
+        font-size: 16px;
+    }
+    
+    .hero-video {
+        rotate: 0deg; /* Remove rotation on mobile */
+    }
+    
+    .hero-video video {
+        width: 100%;
+        min-width: auto;
+        max-width: 300px;
+    }
+    
+    .ellipse-background {
+        display: none; /* Hide on mobile for simplicity */
+    }
+    
+    .contact-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .info-item {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    
+    .team-section {
+        padding: 40px 20px;
+    }
+    
+    .team-section h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    
+    .team-members {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+    
+    .team-member img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .artists-section {
+        padding: 30px 20px;
+    }
+    
+    .artists-section h2 {
+        font-size: 24px;
+    }
+    
+    .artists-columns {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .artists-column {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .features-section {
+        padding: 30px 20px;
     }
     
     .features-section h2 {
-        font-family: League Spartan;
-        font-size: 46px;
-        margin-bottom: 30px;
-        text-transform: uppercase;
+        font-size: 32px;
     }
     
     .features-cards {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
     
     .feature-card {
-        background: rgba(0, 0, 0, 0.35);
-        border-radius: 10px;
-        padding: 25px;
-        width: 250px;
-        text-align: center;
-        transition: transform 0.3s;
+        width: 100%;
+        max-width: 280px;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 28px;
     }
     
-    .feature-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    .hero-video video {
+        max-width: 240px;
     }
     
-    .feature-icon {
-        font-size: 36px;
-        margin-bottom: 10px;
+    .team-member img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .artist-item {
+        padding: 10px;
+    }
+    
+    .artist-number {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    
+    .artist-image-container {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    .features-section h2,
+    .team-section h2 {
+        font-size: 28px;
+    }
+    
+    .feature-card {
+        padding: 15px;
     }
     
     .feature-card h3 {
-        font-family: League Spartan;
-        font-size: 24px;
-        margin-bottom: 15px;
-        text-transform: uppercase;
+        font-size: 20px;
     }
-    
-    .playlist-list, .posts-list {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 20px 0;
-        text-align: center;
-    }
-    
-    .playlist-list li, .posts-list li {
-        margin-bottom: 8px;
-        padding: 6px;
-        background: rgba(0, 0, 0, 0.3);
-        border-radius: 5px;
-    }
-    
-    .artist-spotlight {
-        margin-bottom: 20px;
-    }
-    
-    .artist-spotlight h4 {
-        margin: 25px 0;
-        font-size: 18px;
-    }
-    
-    .feature-button {
-        display: inline-block;
-        background: rgba(255, 255, 255, 0.15);
-        color: white;
-        padding: 8px 15px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-family: League Spartan;
-        font-weight: bold;
-        font-size: 14px;
-        text-transform: uppercase;
-        transition: background 0.3s;
-    }
-    
-    .feature-button:hover {
-        background: rgba(255, 255, 255, 0.25);
-    }
-        
-    .copyright {
-            font-size: 14px;
-            opacity: 0.7;
-    }
-        
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            header, footer {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px;
-            }
-            
-            nav {
-                margin-top: 20px;
-            }
-            
-            nav a {
-                display: inline-block;
-                margin: 5px 10px;
-            }
-            
-            .hero-section {
-                flex-direction: column;
-                text-align: center;
-                padding: 40px 20px;
-            }
-            
-            .hero-text {
-                margin-bottom: 30px;
-            }
-            
-            .hero-text p {
-                margin: 0 auto;
-            }
-            
-            .hero-video video {
-                width: 80%;
-                max-width: 300px;
-            }
-            
-            .contact-section {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .info-item {
-                margin-bottom: 20px;
-            }
-            
-            .features-section {
-                padding: 30px 20px;
-            }
-            
-            .features-cards {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .feature-card {
-                width: 100%;
-                max-width: 280px;
-                margin-bottom: 20px;
-            }
-            
-            .team-members {
-                flex-direction: column;
-                gap: 40px;
-            }
-            
-            .artists-columns {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .artists-column {
-                width: 100%;
-            }
-        }
+}

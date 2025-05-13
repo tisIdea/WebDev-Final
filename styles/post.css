@@ -1,60 +1,84 @@
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  width: 90%; /* Add this to ensure container doesn't touch edges on small screens */
+}
+
+.post-header {
+  text-align: center;
+}
+
+.post-header img {
+  max-width: 100%;
+  height: auto; /* Ensure images maintain aspect ratio */
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: clamp(24px, 5vw, 32px); /* Responsive font size */
+  margin: 20px 0 10px;
+  word-wrap: break-word; /* Prevent text overflow */
+}
+
+.meta-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on small screens */
+  align-items: center;
+  margin-left: 12px;
+  gap: 10px;
+}
+
+.meta {
+  opacity: 0.8;
+  line-height: 1.5;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.tags {
+  font-size: 14px;
+  opacity: 0.7;
+  line-height: 1.5;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow tags to wrap */
+  gap: 5px;
+}
+
+a.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+a.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
   .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
-    }
+    margin: 20px auto; /* Less margin on smaller screens */
+    padding: 15px;
+  }
+  
+  .meta-container {
+    margin-left: 0; /* Remove left margin on small screens */
+  }
+}
 
-    .post-header {
-      text-align: center;
-    }
-
-    .post-header img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
-
-    h1 {
-      font-size: 32px;
-      margin: 20px 0 10px;
-    }
-
-    .meta-container {
-      display: flex;
-      align-items: center; /* Keep this for vertical centering */
-      margin-left: 12px;
-      gap: 10px;
-    }
-
-    .meta {
-      opacity: 0.8;
-      white-space: nowrap;
-      line-height: 1.5; /* Ensure consistent line height */
-      font-family: sans-serif; /* Example: Ensure same font family */
-      margin: 0; /* Reset default margins */
-      padding: 0; /* Reset default padding */
-    }
-
-    .tags {
-      margin-left: 12px;
-      font-size: 14px;
-      opacity: 0.7;
-      white-space: nowrap;
-      line-height: 1.5; /* Ensure consistent line height */
-      font-family: sans-serif; /* Example: Ensure same font family */
-      margin: 0; /* Reset default margins */
-      padding: 0; /* Reset default padding */
-    }
-
-    a.back-link {
-      display: inline-block;
-      margin-top: 30px;
-      text-decoration: none;
-      color: #ffffff;
-      opacity: 0.8;
-    }
-
-    a.back-link:hover {
-      text-decoration: underline;
-    }
+@media (max-width: 480px) {
+  .container {
+    width: 95%; /* Even more width on very small screens */
+    margin: 10px auto;
+    padding: 10px;
+  }
+}
