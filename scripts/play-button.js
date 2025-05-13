@@ -22,11 +22,14 @@ const audioFiles = {
   "play-if-u-want-to": "/audio/If_You_Want_To.mp3",
   "play-she-plays-bass": "/audio/sheplaysbass.mp3",
   "play-the-perfect-pair": "/audio/the_perfect_pair.mp3",
+  "play-eventually": "/audio/eventually.mp3",
+  "play-yes-im-changing": "/audio/yes-im-changing.mp3",
+
 };
 
 let currentAudioElement = null;
 let currentPlayingButton = null;
-let timeoutId = null; // Timeout for 30-second limit
+let timeoutId = null; 
 
 playButtons.forEach(playButton => {
   playButton.addEventListener("click", () => {

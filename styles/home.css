@@ -2,11 +2,13 @@
 main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px; /* Add padding for small screens */
+    padding: 0 15px; 
 }
 
 /* Hero Section */
-.hero-section {
+.hero-section { 
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
     display: flex;
     padding: 60px 50px;
     justify-content: center;
@@ -22,7 +24,7 @@ main {
 .hero-text h1 {
     padding-top: 70px;
     font-family: League Spartan;
-    font-size: 48px;
+    font-size: 46px;
     margin-bottom: 20px;
     text-transform: uppercase;
     transition: ease all 0.3s;
@@ -73,6 +75,8 @@ main {
 
 /* Contact Info Section */
 .contact-section {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
@@ -132,13 +136,12 @@ main {
     margin: 0;
 }
 
-/* Define the spinning animation */
 @keyframes vinylSpin {
     0% {
-        transform: rotate(0deg); /* Start rotation */
+        transform: rotate(0deg);
     }
     100% {
-        transform: rotate(360deg); /* Complete one full rotation */
+        transform: rotate(360deg); 
     }
 }
 
@@ -354,22 +357,22 @@ main {
 /* Responsive Styles */
 @media (max-width: 1200px) {
     .team-members {
-        gap: 150px; /* Reduce gap for medium screens */
+        gap: 150px; 
     }
     
     .artists-columns {
-        gap: 100px; /* Reduce gap for medium screens */
+        gap: 100px; 
     }
 }
 
 @media (max-width: 992px) {
     .hero-section {
-        gap: 50px; /* Reduce gap for tablet screens */
+        gap: 50px; 
         padding: 40px 30px;
     }
     
     .team-members {
-        gap: 80px; /* Further reduce gap */
+        gap: 80px; 
     }
     
     .artists-columns {
@@ -424,7 +427,7 @@ main {
     }
     
     .hero-video {
-        rotate: 0deg; /* Remove rotation on mobile */
+        rotate: 0deg; 
     }
     
     .hero-video video {
@@ -434,7 +437,7 @@ main {
     }
     
     .ellipse-background {
-        display: none; /* Hide on mobile for simplicity */
+        display: none; 
     }
     
     .contact-section {

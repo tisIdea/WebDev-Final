@@ -2,29 +2,29 @@
 main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px; /* Add padding for mobile */
+    padding: 0 15px; 
 }
 
 /* Artist of the Month Hero Section */
 .artist-hero-section {
     display: flex;
-    padding: 60px 20px; /* Reduced side padding */
+    padding: 60px 20px; 
     justify-content: center;
-    gap: clamp(30px, 5vw, 100px); /* Responsive gap */
+    gap: clamp(30px, 5vw, 100px);
     margin-bottom: 30px;
     margin-top: 30px;
-    flex-wrap: wrap; /* Allow wrapping on small screens */
+    flex-wrap: wrap; 
 }
 
 .artist-info {
     flex: 1;
-    min-width: 280px; /* Ensure minimum width on small screens */
+    min-width: 280px; 
 }
 
 .artist-info h1 {
     padding-top: 20px;
-    font-family: 'League Spartan', sans-serif; /* Added fallback font */
-    font-size: clamp(32px, 6vw, 48px); /* Responsive font size */
+    font-family: 'League Spartan', sans-serif; 
+    font-size: clamp(32px, 6vw, 48px); 
     margin-bottom: 20px;
     text-transform: uppercase;
     transition: ease all 0.3s;
@@ -40,7 +40,7 @@ main {
 }
 
 .artist-info p {
-    font-size: clamp(16px, 2vw, 18px); /* Responsive font size */
+    font-size: clamp(16px, 2vw, 18px); 
     line-height: 1.6;
     max-width: 600px;
     margin-bottom: 20px;
@@ -59,14 +59,14 @@ main {
 
 .artist-image img {
     width: 100%;
-    max-width: 100%; /* Ensure image doesn't overflow */
+    max-width: 100%; 
     border-radius: 50%;
     object-fit: cover;
     animation-name: vinylSpin;
     animation-duration: 15s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    aspect-ratio: 1/1; /* Maintain circle shape */
+    aspect-ratio: 1/1; 
 }
 
 .artist-image img:hover {
@@ -95,7 +95,7 @@ main {
 
 /* Music Tracks Section */
 .music-section {
-    padding: 30px 20px; /* Reduced padding for mobile */
+    padding: 30px 20px; 
     margin-bottom: 30px;
     background: rgba(0, 0, 0, 0.35);
     border-radius: 10px;
@@ -103,7 +103,7 @@ main {
 
 .music-section h2 {
     font-family: 'League Spartan', sans-serif;
-    font-size: clamp(26px, 5vw, 36px); /* Responsive font size */
+    font-size: clamp(26px, 5vw, 36px); 
     margin-bottom: 30px;
     text-transform: uppercase;
     text-align: center;
@@ -169,7 +169,7 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: clamp(16px, 3vw, 20px); /* Responsive size */
+    font-size: clamp(16px, 3vw, 20px); 
     color: white;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -188,34 +188,34 @@ main {
 }
 
 .track-name {
-    font-size: clamp(16px, 2.5vw, 18px); /* Responsive font size */
+    font-size: clamp(16px, 2.5vw, 18px); 
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 .track-details {
     grid-area: details;
-    font-size: clamp(12px, 2vw, 14px); /* Responsive font size */
+    font-size: clamp(12px, 2vw, 14px); 
     opacity: 0.8;
 }
 
 .track-duration {
     grid-area: duration;
-    font-size: clamp(12px, 2vw, 14px); /* Responsive font size */
+    font-size: clamp(12px, 2vw, 14px); 
     opacity: 0.8;
     margin-right: 15px;
-    white-space: nowrap; /* Prevent wrapping */
+    white-space: nowrap; 
 }
 
 /* Review Section */
 .review-section {
-    padding: 30px 20px; /* Reduced padding for mobile */
+    padding: 30px 20px; 
     margin-bottom: 30px;
 }
 
 .review-section h2 {
     font-family: 'League Spartan', sans-serif;
-    font-size: clamp(26px, 5vw, 36px); /* Responsive font size */
+    font-size: clamp(26px, 5vw, 36px); 
     margin-bottom: 30px;
     text-transform: uppercase;
     text-align: center;
@@ -224,37 +224,37 @@ main {
 .review-container {
     background: rgba(0, 0, 0, 0.35);
     border-radius: 10px;
-    padding: clamp(15px, 3vw, 30px); /* Responsive padding */
+    padding: clamp(15px, 3vw, 30px); 
 }
 
 .reviewer-info {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    flex-wrap: wrap; /* Allow wrapping on small screens */
+    flex-wrap: wrap; 
     gap: 10px;
 }
 
 .reviewer-image {
-    width: clamp(40px, 8vw, 60px); /* Responsive size */
-    height: clamp(40px, 8vw, 60px); /* Responsive size */
+    width: clamp(40px, 8vw, 60px); 
+    height: clamp(40px, 8vw, 60px); 
     border-radius: 50%;
     object-fit: cover;
 }
 
 .reviewer-name {
     font-weight: bold;
-    font-size: clamp(16px, 2.5vw, 18px); /* Responsive font size */
+    font-size: clamp(16px, 2.5vw, 18px); 
 }
 
 .reviewer-title {
-    font-size: clamp(12px, 2vw, 14px); /* Responsive font size */
+    font-size: clamp(12px, 2vw, 14px); 
     opacity: 0.8;
 }
 
 .review-date {
     margin-left: auto;
-    font-size: clamp(12px, 2vw, 14px); /* Responsive font size */
+    font-size: clamp(12px, 2vw, 14px); 
     opacity: 0.8;
 }
 
