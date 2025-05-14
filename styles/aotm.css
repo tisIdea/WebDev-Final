@@ -7,8 +7,9 @@ main {
 
 /* Artist of the Month Hero Section */
 .artist-hero-section {
-    display: flex;
-    padding: 60px 20px; 
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;    display: flex;
+    padding: 60px 30px; 
     justify-content: center;
     gap: clamp(30px, 5vw, 100px);
     margin-bottom: 30px;
